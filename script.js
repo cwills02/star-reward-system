@@ -1,7 +1,7 @@
 const container = document.querySelector('.container')
-const addBtns = document.querySelectorAll('.add')
-const stars = document.querySelectorAll('.star')
-const total = document.querySelector('.total')
+// const addBtns = document.querySelectorAll('.add')
+// const stars = document.querySelectorAll('.star')
+// const total = document.querySelector('.total')
 let totalStars = 0
 const submit = document.querySelector('.submit')
 const input = document.getElementById('new-chore')
@@ -23,17 +23,20 @@ form.addEventListener('submit', (e) => {
 
     input.value = ''
   }
-})
+  const addBtns = document.querySelectorAll('.add')
+  const stars = document.querySelectorAll('.star')
+  const total = document.querySelector('.total')
 
-addBtns.forEach((btn, index) => {
-  addEventListener('click', (e) => {
-    if (e.target === addBtns[index]) {
-      stars[index].classList.toggle('active')
-    }
-    totalStars = document.getElementsByClassName('star active').length
-    total.innerHTML = `Total Stars: ${totalStars}`
-    if (totalStars === stars.length) {
-      total.innerHTML = `Total Stars: ${totalStars} Awesome Job!`
-    }
+  addBtns.forEach((btn, index) => {
+    addEventListener('click', (e) => {
+      if (e.target === addBtns[index]) {
+        stars[index].classList.toggle('active')
+      }
+      totalStars = document.getElementsByClassName('star active').length
+      total.innerHTML = `Total Stars: ${totalStars}`
+      if (totalStars === stars.length) {
+        total.innerHTML = `Total Stars: ${totalStars} Awesome Job!`
+      }
+    })
   })
 })
