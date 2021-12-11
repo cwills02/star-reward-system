@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: auto;
+}
+
+.container {
+  background-color: #f0f0f0;
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.star-container {
+  display: flex;
+  line-height: 2em;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.star-container h1 {
+  margin: 0;
+  width: 50%;
+}
+
+.star {
+  visibility: hidden;
+}
+
+.star.active {
+  visibility: visible;
+}
