@@ -19,6 +19,13 @@ body {
   border-radius: 10px;
 }
 
+.total-container {
+  background-color: #f0f0f0;
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+}
+
 .star-container {
   display: flex;
   line-height: 2em;
