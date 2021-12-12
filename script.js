@@ -7,7 +7,7 @@ const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  if (input.value !== '') {
+  if (input.value.trim().length >= 5) {
     let div = document.createElement('div')
     div.setAttribute('class', 'star-container')
     div.innerHTML = `
