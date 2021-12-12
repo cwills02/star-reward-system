@@ -59,9 +59,12 @@ form.addEventListener('submit', (e) => {
         document.getElementById(`${index}`).classList.contains('star-active')
       ) {
         document.getElementById(`${index}`).classList.remove('star-active')
+        totalStars = document.getElementsByClassName('star-active').length
+        totalStars = totalStars--
+        if (totalStars < stars.length) {
+          total.innerHTML = `Total Stars: ${totalStars}`
+        }
       }
     })
-    totalStars = totalStars--
-    total.innerHTML = `Total Stars: ${totalStars}`
   })
 })
