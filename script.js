@@ -1,9 +1,4 @@
-// ⭐
-
 const container = document.querySelector('.container')
-// const addBtns = document.querySelectorAll('.add')
-// const stars = document.querySelectorAll('.star')
-// const total = document.querySelector('.total')
 let totalStars = 0
 const submit = document.querySelector('.submit')
 const input = document.getElementById('new-chore')
