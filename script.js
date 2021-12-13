@@ -11,8 +11,8 @@ form.addEventListener('submit', (e) => {
     let div = document.createElement('div')
     div.setAttribute('class', 'star-container')
     div.innerHTML = `
-    <h1>${input.value}</h1>
-    <button class="delete">Remove Chore</button>
+    <h2>${input.value}</h2>
+    <button class="delete">Delete Chore</button>
     <button class="add">+</button>
     <button class="remove">-</button>
     <div class="star">⭐</div>
@@ -43,7 +43,7 @@ form.addEventListener('submit', (e) => {
       }
       totalStars = document.getElementsByClassName('star-active').length
       total.innerHTML = `Total Stars: ${totalStars}`
-      if (totalStars === stars.length) {
+      if (totalStars === stars.length && stars.length > 0) {
         total.innerHTML = `Total Stars: ${totalStars} <span class="awesome">Awesome Job!</span>`
       }
     })

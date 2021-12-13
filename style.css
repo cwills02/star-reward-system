@@ -8,6 +8,15 @@ body {
   display: flex;
 }
 
+#new-chore {
+  height: 2em;
+  border-radius: 5px;
+}
+
+#new-chore:focus {
+  outline-color: lightblue;
+}
+
 .submit {
   border-radius: 5px;
   border: none;
@@ -32,7 +41,8 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  background-color: lightcoral;
+  background-color: red;
+  color: #fff;
   padding: 10px;
   font-weight: bold;
 }
@@ -68,18 +78,23 @@ body {
 
 .star-container {
   display: flex;
-  line-height: 2em;
   justify-content: space-around;
   width: 100%;
 }
 
-.star-container h1 {
-  margin: 0;
-  width: 50%;
+.star-container h2 {
+  margin: auto;
+  width: fit-content;
+  background-color: purple;
+  color: yellow;
+  border-radius: 5px;
+  overflow: visible;
+  padding: 5px;
 }
 
 .star {
   visibility: hidden;
+  font-size: 24px;
 }
 
 .star.star-active {
@@ -87,5 +102,5 @@ body {
 }
 
 .awesome {
-  color: rgb(206, 13, 45);
+  color: rgb(206, 13, 180);
 }
