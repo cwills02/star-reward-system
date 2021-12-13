@@ -20,16 +20,6 @@ form.addEventListener('submit', (e) => {
     container.appendChild(div)
 
     input.value = ''
-
-    const starDivs = document.querySelectorAll('.star-container')
-
-    const deleteBtns = document.querySelectorAll('.delete')
-
-    deleteBtns.forEach((btn, index) => {
-      btn.addEventListener('click', (e) => {
-        btn.parentNode.remove()
-      })
-    })
   }
 
   let addBtns = document.querySelectorAll('.add')
@@ -72,6 +62,17 @@ form.addEventListener('submit', (e) => {
           total.innerHTML = `Total Stars: ${totalStars}`
         }
       }
+
+      const starDivs = document.querySelectorAll('.star-container')
+
+      const deleteBtns = document.querySelectorAll('.delete')
+
+      deleteBtns.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+          btn.parentNode.remove()
+          stars = document.querySelectorAll('.star')
+        })
+      })
     })
   })
 })
