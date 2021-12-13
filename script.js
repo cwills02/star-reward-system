@@ -12,6 +12,7 @@ form.addEventListener('submit', (e) => {
     div.setAttribute('class', 'star-container')
     div.innerHTML = `
     <h1>${input.value}</h1>
+    <button class="delete">Remove Chore</button>
     <button class="add">+</button>
     <button class="remove">-</button>
     <div class="star">⭐</div>
@@ -19,7 +20,18 @@ form.addEventListener('submit', (e) => {
     container.appendChild(div)
 
     input.value = ''
+
+    const starDivs = document.querySelectorAll('.star-container')
+
+    const deleteBtns = document.querySelectorAll('.delete')
+
+    deleteBtns.forEach((btn, index) => {
+      btn.addEventListener('click', (e) => {
+        btn.parentNode.remove()
+      })
+    })
   }
+
   let addBtns = document.querySelectorAll('.add')
   let removeBtns = document.querySelectorAll('.remove')
   let stars = document.querySelectorAll('.star')

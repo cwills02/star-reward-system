@@ -17,6 +17,26 @@ body {
   font-weight: bold;
 }
 
+.add,
+.remove {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: lightblue;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.delete {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: lightcoral;
+  padding: 10px;
+  font-weight: bold;
+}
+
 .submit:hover {
   border: 1px solid black;
 }
@@ -35,6 +55,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  color: darkblue;
 }
 
 .total-container {
@@ -42,6 +63,7 @@ body {
   height: fit-content;
   width: 80%;
   margin: auto;
+  color: darkblue;
 }
 
 .star-container {
